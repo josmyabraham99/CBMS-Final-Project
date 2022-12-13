@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model BookDriverViewModel
+@{
+    ViewData["Title"] = "Payment";
+}
+
+
+
+<section class="vh-100">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5"></div>
+                
+               <form>
+
+                 <div class="one">
+                        <h1>Pay Your Cab Charge🚖</h1>
+
+                        <br/>
+                        <div class="text-center">
+       
+                           <div>
+                                    <p style="color:red">Online Payment is NOT available now,Choose Payment ByCash .</p>
+                                    <br />
+                                    <p>Cab Driver will contact you📳</p>
+                                    <p style="color:darkblue"><b>THANK YOU !</b></p>
+                           
+                            <div class="d-grid mt-4">
+                                <button class="btn btn-primary"></button>
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            </div>     
+                             
+                           </div>
+               </form>
+              
+        </div>
+    </div>
+       
+</section>
+   
+              
+                
+  
+         

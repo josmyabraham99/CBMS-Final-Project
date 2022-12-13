@@ -1,0 +1,40 @@
+﻿@model IList<BookDriver>
+@{
+    ViewData["Title"] = "DriverTable";
+}
+
+<h1>Call Cabiee Driver's' List</h1>
+
+   <table class="table table-striped">
+        <tr>
+            <th>Vehicles</th>
+           
+            <th>DriverName</th>
+            <th>CabNumber</th>
+            <th>Contact</th>
+            <th>Languages</th>
+            <th>Summary</th>
+        </tr>
+        @foreach (var movie in Model)
+        {
+            <tr>
+                <td>@movie.Vehicles</td>
+             
+                <td>@movie.DriverName</td>
+                <td>@movie.CabNumber</td>
+                <td>@movie.Contact</td>
+                <td>@movie.Languages</td>
+                <td>@movie.Summary</td>
+
+           
+           
+            </tr>
+
+        }
+  
+   </table>
+
+
+
+
+

@@ -1,0 +1,80 @@
+﻿@model IEnumerable<BookDriver>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1> Driver's List</h1>
+
+@*<div class="d-flex">
+    <a asp-action="Create" class="btn btn-success ms-auto my-2">+ Add Driver</a>
+</div>
+
+<div class="container-fluid">
+    
+    @if (Model.Any())
+    {
+        <div class="row gap-5">
+            @foreach (var item in Model)
+
+            {
+                <div class="card col-sm-3 shadow">
+
+                    <div class="card-body">
+                        <h2>@item.Vehicles</h2>
+                        <h3>@item.DriverName</h3>
+                        <h4>@item.VehicleNumber</h4>
+                        <h5>@item.Contact</h5>
+                        <p>@item.Summary</p>
+                    </div>
+                    <div class="card-footer d-flex">
+                        <div class="btn-group ms-auto">
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger" onclick="return confirm('Do you want to delete this Driver?')">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            }
+
+   
+        <div class="alert alert-info">
+            No Drivers were found. Please
+            <a asp-action="Create" class="alert-link">Add a Driver</a> first.
+        </div>
+    }*@
+<div class="d-flex">
+    <a asp-action="Create" class="btn btn-success ms-auto my-2">+ Add Driver</a>
+</div>
+
+    <table class="table table-striped">
+        <tr>
+            <th>Vehicles</th>
+         
+            <th>DriverName</th>
+            <th>CabNumber</th>
+            <th>Contact</th>
+            <th>Languages</th>
+            <th>Charge</th>
+            <th>Summary</th>
+        </tr>
+        @foreach (var movie in Model)
+        {
+            <tr>
+                <td>@movie.Vehicles</td>
+               
+                <td>@movie.DriverName</td>
+                <td>@movie.CabNumber</td>
+                <td>@movie.Contact</td>
+                <td>@movie.Languages</td>
+                <td>@movie.Charge</td>
+                <td>@movie.Summary</td>
+            
+                <td>     
+                    <div class="btn-group ms-auto">
+                         <a asp-action="Edit" asp-controller="Home" asp-area="Admin" asp-route-id="@movie.Id" class="btn btn-primary">Edit</a>
+                         <a asp-action="Delete"  asp-route-id="@movie.Id" class="btn btn-danger" onclick="return confirm('Do you want to delete this Driver?')">Delete</a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </table>
+

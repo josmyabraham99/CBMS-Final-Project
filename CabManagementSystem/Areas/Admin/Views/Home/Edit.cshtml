@@ -1,0 +1,60 @@
+﻿@model BookDriverViewModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Driver Edit</h1>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+            <form method="post">
+                <div>
+                    <label asp-for="Vehicles"></label>
+                    <select asp-for="Vehicles" asp-items="@Html.GetEnumSelectList<CabTypes>()" class="form-control">
+                        <option>--- Select type of vehicle---</option>
+                    </select>
+                    <span asp-validation-for="Vehicles" class="text-danger"></span>
+
+                </div>
+                <div>
+                    <label asp-for="DriverName"></label>
+                    <input asp-for="DriverName" class="form-control" />
+                    <span asp-validation-for="DriverName" class="text-danger"></span>
+                </div>
+                <div>
+                    <label asp-for="CabNumber"></label>
+                    <input asp-for="CabNumber" class="form-control" />
+                    <span asp-validation-for="CabNumber" class="text-danger"></span>
+                </div>
+                <div>
+                    <label asp-for="Languages"></label>
+                    <input asp-for="Languages" class="form-control" />
+                       <span asp-validation-for="Languages" class="text-danger"></span>
+                   
+                </div>
+                <div>
+                    <label asp-for="Charge"></label>
+                    <input asp-for="Charge"  class="form-control" />
+                    <span asp-validation-for="Charge" class="text-danger"></span>
+
+                </div>
+                
+                 <div>
+                    <label asp-for="Contact"></label>
+                    <input asp-for="Contact" class="form-control" />
+                       <span asp-validation-for="Contact" class="text-danger"></span>
+                   
+                </div>
+                <div>
+                    <label asp-for="Summary"></label>
+                    <textarea asp-for="Summary" class="form-control"></textarea>
+                    <span asp-validation-for="Summary" class="text-danger"></span>
+                </div>
+                <div class="d-grid mt-4">
+                    <button class="btn btn-primary">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

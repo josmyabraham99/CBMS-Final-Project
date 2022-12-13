@@ -1,0 +1,37 @@
+﻿@model IList<Book>
+@{
+    ViewData["Title"] = "BookingHistory";
+}
+
+<h1>Cabiee Booking History</h1>
+
+   <table class="table table-striped">
+        <tr>
+            <th>CustomerId</th>
+           
+            <th>PickUp Place</th>
+            <th>DropDown Place</th>
+            <th>VehicleType</th>
+            <th>Date</th>
+          
+        </tr>
+        @foreach (var movie in Model)
+        {
+            <tr>
+                <td>@movie.Id</td>
+             
+                <td>@movie.PickUp</td>
+                <td>@movie.DropDown</td>
+                <td>@movie.Vehicle</td>
+                <td>@movie.Date</td>
+               
+            
+            </tr>
+        }
+  
+   </table>
+
+
+
+
+

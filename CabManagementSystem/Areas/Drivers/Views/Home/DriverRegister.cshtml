@@ -1,0 +1,73 @@
+﻿@model DriverViewModel
+@{
+    ViewData["Title"] = "DriverRegister";
+}
+
+
+
+
+
+
+    <div class="one">
+    <h1>CALL CABIEE</h1>
+  </div>
+
+
+<section class="">
+    
+    <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+        <div class="container">
+            <div class="row gx-lg-5 align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h1 class="my-5 display-3 fw-bold ls-tight">
+                        Be the best Driver<br />
+                        <span class="text-primary">for Call Cabiee</span>
+                    </h1>
+                    <p style="color: hsl(217, 10%, 50.8%)">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Eveniet, itaque accusantium odio, soluta, corrupti aliquam
+                        quibusdam tempora at cupiditate quis eum maiores libero
+                        veritatis? Dicta facilis sint aliquid ipsum atque?
+                    </p>
+                </div>
+
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="card">
+                        <div class="card-body py-5 px-md-5">
+          <form method="post">
+
+
+                    <div>
+                        <label asp-for="Number"></label>
+                        <input asp-for="Number" class="form-control" />
+                        <span asp-validation-for="Number" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="Vehicle"></label>
+                       <select asp-for="Vehicle" asp-items="@Html.GetEnumSelectList<Vehicles>()" class="form-control">
+                            <option>--- Select a VehicleType---</option>
+                        </select>
+                        <span asp-validation-for="Vehicle" class="text-danger"></span>
+                    </div>
+                    <div>
+                        <label asp-for="Liscense"></label>
+                        <input asp-for="Liscense" class="form-control" />
+                        <span asp-validation-for="Liscense" class="text-danger"></span>
+                    </div>
+              
+                    <div>
+                        <label asp-for="Contact"></label>
+                        <input asp-for="Contact" class="form-control" />
+                        <span asp-validation-for="Contact" class="text-danger"></span>
+                    </div>
+                    <div class="d-grid mt-4">
+                        <button class="btn btn-primary" >Register</button>
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    </div>
+
+
+                </form>
+        </div>
+      </div>
+    </div> 
+  </section>
